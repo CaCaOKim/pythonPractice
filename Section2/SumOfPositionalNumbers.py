@@ -10,12 +10,12 @@ sys.stdin=open("SumOfPositionalNumbersInput.txt", "rt")
 
 N = int(input())
 nums = list(map(int, input().split()))
-maxsum = 0
+maxSum = 0
 result = 0
 
 for i in range(N):
-    if digit_sum(nums[i]) > maxsum:
-        maxsum = digit_sum(nums[i])
+    if digit_sum(nums[i]) > maxSum:
+        maxSum = digit_sum(nums[i])
         result = nums[i]
 
 print(result)
