@@ -2,10 +2,10 @@ import sys
 sys.stdin = open("MusicVideoDecisionAlgorithmInput.txt", "rt")
 
 N, M = map(int, input().split())
-DVDs = list(map(int, input().split()))
+musics = list(map(int, input().split()))
 
 s = 1
-e = sum(DVDs)
+e = sum(musics)
 result = 0
 
 while s<=e:
@@ -14,15 +14,15 @@ while s<=e:
     temp = 0
     cnt = 1
     for i in range(N):
-        temp += DVDs[i]
+        temp += musics[i]
         if temp > mid:
             cnt += 1
-            temp = DVDs[i]
+            temp = musics[i]
 
-    if cnt > M:
-        s = mid+1
-    else:
+    if mid>=max(musics) and cnt <= M:
         e = mid-1
         result = mid
-
+    else:
+        s = mid+1
+        
 print(result)
