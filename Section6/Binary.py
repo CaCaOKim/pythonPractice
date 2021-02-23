@@ -1,15 +1,15 @@
-def binary(n):
-    next = n//2
-    if n==0:
-        return
+def DFS(num, res, ten):
+    if num==0:
+        return res
     else:
-        binary(next)
-        print(n%2, end='')
+        res = res + num%2*ten
+        nNum = num//2
+        return DFS(nNum, res, ten*10)
 
 import sys
 sys.stdin = open("BinaryInput.txt", "rt")
 
 N = int(input())
 
-binary(N)
-print()
+print(DFS(N, 0, 1))
+
