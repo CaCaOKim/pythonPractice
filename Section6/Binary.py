@@ -3,8 +3,8 @@ def DFS(num, res, ten):
         return res
     else:
         res = res + num%2*ten
-        nNum = num//2
-        return DFS(nNum, res, ten*10)
+        nextNum = num//2
+        return DFS(nextNum, res, ten*10)
 
 import sys
 sys.stdin = open("BinaryInput.txt", "rt")
