@@ -1,12 +1,12 @@
-def DFS(s):
-    if s>7:
+def DFS(s,max):
+    if s>max:
         return
     else:
         print(s, end=' ')
-        DFS(s*2)
-        DFS(s*2+1)
+        DFS(s*2,max)
+        DFS(s*2+1,max)
 
 
-DFS(1)
+DFS(1,7)
 print()
 
