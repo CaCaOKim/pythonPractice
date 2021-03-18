@@ -1,13 +1,13 @@
 def DFS(num):
-    if num==N+1:
-        for i in range(1, N+1):
+    if num == N+1:
+        for i in range(1, num):
             if check[i]==1:
                 print(i, end=' ')
         print()
     else:
-        check[num]=1
+        check[num] = 1
         DFS(num+1)
-        check[num]=0
+        check[num] = 0
         DFS(num+1)
 
 
