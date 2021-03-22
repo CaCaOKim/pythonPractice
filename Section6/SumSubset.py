@@ -5,7 +5,7 @@ def DFS(i, s):
     if s>total//2:
         return
     if i==N:
-        if s==(total-s):
+        if s==total/2:
             print('YES')
             sys.exit(0)
     else:
@@ -14,8 +14,7 @@ def DFS(i, s):
 
 N = int(input())
 num = list(map(int, input().split()))
-total = sum(num)
-
+print(total)
 DFS(0,0)
 print("NO")
 
