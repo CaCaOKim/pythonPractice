@@ -6,7 +6,7 @@ scores = list(map(int, input().split()))
 
 result = 0
 repNum = 0
-avg = round(sum(scores)/N)
+avg = int(sum(scores)/N + 0.5)
 
 for i in range(len(scores)):
     gap = abs(scores[i] - avg)
