@@ -2,8 +2,8 @@ def DFS(num):
     if num>7:
         return
     else:
-        print(num)
         DFS(num*2)
+        print(num)
         DFS(num*2+1)
 
 
