@@ -6,6 +6,5 @@ def DFS(num):
         print(num)
         DFS(num*2+1)
 
-
 DFS(1)
 
